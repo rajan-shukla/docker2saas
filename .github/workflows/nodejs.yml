@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajancd:latest -f https://hub.docker.com/repository/docker/rajan715/rajancd/general.
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajan715/rajancd:latest .
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/rajancd:latest
