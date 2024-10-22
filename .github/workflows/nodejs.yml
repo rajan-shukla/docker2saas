@@ -23,8 +23,8 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajan715/rajancd:default .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajancd:default .
         working-directory: Dockerfile
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/rajan715/rajancd:default
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/rajancd:default .
