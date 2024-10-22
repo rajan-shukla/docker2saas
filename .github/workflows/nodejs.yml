@@ -7,7 +7,7 @@ on:
   
 jobs:
   build:
-    runs-on: docker build -t ***/rajancd:latest -f /path/to/Dockerfile .
+    runs-on: ubuntu-latest .
 
 
     steps:
@@ -24,7 +24,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajancd:latest .
+      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajancd:latest -f https://hub.docker.com/repository/docker/rajan715/rajancd/general.
 
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/rajancd:latest
