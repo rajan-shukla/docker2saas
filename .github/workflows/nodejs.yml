@@ -7,7 +7,8 @@ on:
   
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: docker build -t ***/rajancd:latest -f /path/to/Dockerfile .
+
 
     steps:
     - name: Checkout Repository
