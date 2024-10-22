@@ -24,7 +24,7 @@ jobs:
 
       - name: Build Docker image
         run: docker build -t ${{ secrets.DOCKER_USERNAME }}/rajan715/rajancd:default .
-        working-directory: ./path/to/your/dockerfile
+        working-directory: Dockerfile
 
       - name: Push Docker image
         run: docker push ${{ secrets.DOCKER_USERNAME }}/rajan715/rajancd:default
